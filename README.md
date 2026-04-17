@@ -1,4 +1,4 @@
-# ⚡ S. T. A. K.
+﻿# ⚡ S. T. A. K.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -11,16 +11,16 @@
 ## ✨ Features
 
 ### 1. ▶ Career Simulator
-Simulate any career path — real or imagined — across 30 years of compounding economics.
+Simulate any career path - real or imagined - across 30 years of compounding economics.
 
 - Type **any job title** and Gemini AI predicts starting salary, growth rate, and automation risk
 - Configurable **economic scenarios**: Normal, Bull Market, Recession, AI Disruption
 - **Student debt repayment** model with interest compounding
-- **Learning investment toggle** — see how skipping upskilling costs you `-0.3%/yr growth`
+- **Learning investment toggle** - see how skipping upskilling costs you `-0.3%/yr growth`
 - **Compare two careers** side-by-side on the same chart
 - Location tier modifier (Tier 1/2/3 city salary adjustments)
 - AI Coach chatbot with full context over your simulation data
-- Resume Matcher — paste your skills for a compatibility score
+- Resume Matcher - paste your skills for a compatibility score
 
 ---
 
@@ -39,14 +39,14 @@ Quantify the true cost of staying where you are.
 
 - Enter your current role, dream role, salary gap, and years of hesitation
 - Calculates **total lost lifetime earnings** with compounding
-- Shows the **retirement corpus gap** — how much smaller your nest egg will be at 60
-- Dramatic "death clock" countdown — career hours burned in your current role
+- Shows the **retirement corpus gap** - how much smaller your nest egg will be at 60
+- Dramatic "death clock" countdown - career hours burned in your current role
 - AI-generated regret narrative: what your life looks like in each path
 
 ---
 
 ### 4. ⏰ Time Machine
-See the ghost of your future career — the path you didn't take.
+See the ghost of your future career - the path you didn't take.
 
 - Models two parallel wealth-accumulation paths (current vs. dream) over 10 years
 - Animated `ComposedChart` shows where the two paths diverge
@@ -75,19 +75,19 @@ Calculate exactly how many days until you break down.
 - Multi-dimensional scoring: **Physical / Motivational / Relational / Emotional**
 - Animated SVG ring gauge (0–100 burnout score)
 - Massive "**X days until breakdown**" counter
-- Dynamic recovery action list — only shows interventions relevant to your highest-scoring dimensions
+- Dynamic recovery action list - only shows interventions relevant to your highest-scoring dimensions
 - AI-generated burnout narrative with ONE specific action to take this week
 
 ---
 
 ### 7. 💰 FIRE Calculator
-Know exactly when — and how — you never have to work again.
+Know exactly when - and how - you never have to work again.
 
 - 5 sliders: current salary, monthly expenses, current portfolio, dream salary, expected returns
 - Live **savings rate badge** updates as you move sliders (🟢 Strong / 🟡 Moderate / 🔴 Too low)
-- **Animated SVG ring gauge** — FIRE Readiness Score (0–100%)
+- **Animated SVG ring gauge** - FIRE Readiness Score (0–100%)
 - Giant animated FIRE corpus number (₹X.XXCr) with gold glow
-- **SIP needed** — exact monthly investment required to hit FIRE in N years
+- **SIP needed** - exact monthly investment required to hit FIRE in N years
 - Dual-path wealth accumulation chart: current vs. dream career with FIRE reference line
 - Dramatic "**X years saved**" banner: `X fewer Mondays, X months of waking up free`
 - AI-generated FIRE insight: frames the year difference as lived human experience
@@ -99,12 +99,12 @@ Get a brutally honest grade on the health of your career across 5 dimensions.
 
 - 10-question diagnostic quiz (2 questions per dimension)
 - 5 scored dimensions: **Financial Health · Growth Trajectory · Job Security · Purpose Alignment · Market Position**
-- 1–5 interactive rating buttons — live preview score updates as you answer
+- 1–5 interactive rating buttons - live preview score updates as you answer
 - **Giant letter grade** (A/B/C/D/F) with dimension-matched color glow
 - Pentagon **RadarChart** showing all 5 dimensions at once
-- Mini-card per dimension — tags your Weakest and Strongest
+- Mini-card per dimension - tags your Weakest and Strongest
 - AI-generated 3-sentence diagnostic report
-- Dynamic **30-day prescription** — only shows actions relevant to your lowest-scoring dimensions
+- Dynamic **30-day prescription** - only shows actions relevant to your lowest-scoring dimensions
 
 ---
 
@@ -115,7 +115,7 @@ Get a brutally honest grade on the health of your career across 5 dimensions.
 | **Frontend** | React 18 (Vite), Vanilla CSS (Brutalist design system), Recharts, Lucide React |
 | **Backend** | Node.js, Express.js |
 | **AI** | Google Gemini 1.5 Flash (via `@google/generative-ai` SDK) |
-| **Charts** | Recharts — ComposedChart, RadarChart, AreaChart, ReferenceLine |
+| **Charts** | Recharts - ComposedChart, RadarChart, AreaChart, ReferenceLine |
 | **Animations** | Custom `useCountUp`, `useTypewriter`, SVG ring gauge hooks |
 | **Env** | dotenvx |
 
@@ -188,10 +188,10 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ### 3. Run
 
 ```bash
-# Terminal 1 — Backend (port 5000)
+# Terminal 1 - Backend (port 5000)
 cd backend && node server.js
 
-# Terminal 2 — Frontend (port 5173)
+# Terminal 2 - Frontend (port 5173)
 cd frontend && npm run dev
 ```
 
@@ -222,10 +222,10 @@ Open [http://localhost:5173](http://localhost:5173)
 The app uses a **Neo-Brutalist** design system defined in `index.css`:
 
 - **Black** background (`#0a0a0a`) with sharp 4px solid borders
-- **Electric Green** (`#0BF46C`) — primary accent, success states
-- **Gold** (`#FFD700`) — FIRE calculator, financial data
-- **Danger Red** (`#FF0000`) — burnout, regret, critical warnings
-- **Purple** (`#8B5CF6`) — dream career paths, aspirational data
+- **Electric Green** (`#0BF46C`) - primary accent, success states
+- **Gold** (`#FFD700`) - FIRE calculator, financial data
+- **Danger Red** (`#FF0000`) - burnout, regret, critical warnings
+- **Purple** (`#8B5CF6`) - dream career paths, aspirational data
 - Sharp corners, no border-radius, monospace typography throughout
 - All features include animated skeleton loading screens with "cooking" copy
 
@@ -233,7 +233,7 @@ The app uses a **Neo-Brutalist** design system defined in `index.css`:
 
 ## 🤖 AI Behaviour
 
-Every AI call has a **hardcoded offline fallback** — if the Gemini API is unavailable or the key is missing, the app returns a pre-written narrative based on the calculated numbers. No feature breaks without an API key; they just lose the personalized narrative layer.
+Every AI call has a **hardcoded offline fallback** - if the Gemini API is unavailable or the key is missing, the app returns a pre-written narrative based on the calculated numbers. No feature breaks without an API key; they just lose the personalized narrative layer.
 
 Gemini is used for:
 - Career salary/growth/risk prediction (`/simulate`, `/pivot`)
