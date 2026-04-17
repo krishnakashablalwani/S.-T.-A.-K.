@@ -1,7 +1,7 @@
 {
   "name": "stak-1",
   "version": "1.0.0",
-  "description": "Career Decision Simulator",
+  "description": "S.T.A.K. — Simulate. Track. Analyze. Know.",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
