@@ -101,7 +101,7 @@ function App() {
 
     try {
       const [result] = await Promise.all([
-        fetch('http://localhost:5000/api/simulate', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/simulate`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
@@ -139,23 +139,26 @@ function App() {
               onError={e => { e.target.style.display = 'none'; }}
             />
           </label>
-          <h1 className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap text-brand-light">
-            S. T. A. K.
+          <h1 className="text-5xl font-black uppercase whitespace-nowrap text-brand-light" style={{ letterSpacing: '0.04em' }}>
+            S.T.A.K.
           </h1>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-0 min-w-0">
           {/* Dark / Light toggle */}
           <button
-            className="theme-toggle-btn font-mono text-sm"
+            className="theme-toggle-btn font-mono text-sm shrink-0"
             onClick={() => setDarkMode(d => !d)}
             title="Toggle dark/light mode"
           >
             {darkMode ? '☀ LIGHT' : '☾ DARK'}
           </button>
 
+          {/* Vertical separator */}
+          <div style={{ width: '4px', alignSelf: 'stretch', backgroundColor: 'var(--color-brand-light)', flexShrink: 0, margin: '0 12px' }} />
+
           {/* Tab Navigation — scrollable on mobile */}
-          <div className="flex gap-0 border-4 border-brand-light overflow-x-auto max-w-full" style={{ scrollbarWidth: 'none' }}>
+          <div className="flex gap-0 border-4 border-brand-light overflow-x-auto" style={{ scrollbarWidth: 'none', minWidth: 0 }}>
             <button
               onClick={() => setActiveTab('simulate')}
               className={`px-4 py-2 font-black uppercase text-sm transition-all whitespace-nowrap shrink-0 ${activeTab === 'simulate'

@@ -292,17 +292,28 @@ const SimulationResults = ({ data, darkMode = false, chartAxisColor = '#1A1A1A',
       )}
 
       <div className="chart-card-animate flex gap-4 mb-2" style={{ animationDelay: '0.1s' }}>
-        <label className="brutal-box flex items-center gap-3 cursor-pointer p-3 bg-brand-light hover:bg-brand-accent transition-colors border-brand-light">
-          <input
-            type="checkbox"
-            checked={showReal}
-            onChange={(e) => setShowReal(e.target.checked)}
-            className="w-6 h-6 outline-none accent-brand-gray"
-          />
+        <button
+          type="button"
+          onClick={() => setShowReal(r => !r)}
+          className="brutal-box flex items-center gap-3 cursor-pointer p-3 transition-colors border-brand-light"
+          style={{ backgroundColor: showReal ? 'var(--color-brand-accent)' : 'var(--color-brand-light)' }}
+        >
+          {/* Custom checkbox square */}
+          <span
+            style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              width: 24, height: 24,
+              border: '3px solid #1A1A1A',
+              backgroundColor: showReal ? '#1A1A1A' : 'transparent',
+              flexShrink: 0,
+            }}
+          >
+            {showReal && <span style={{ color: 'var(--color-brand-accent)', fontWeight: 900, fontSize: 16, lineHeight: 1 }}>✓</span>}
+          </span>
           <span className="font-black uppercase text-lg select-none text-brand-black">
             TOGGLE REAL SALARY (INFLATION DEDUCT)
           </span>
-        </label>
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-4 bg-brand-black p-4 border-4 border-brand-light/20">
@@ -317,7 +328,7 @@ const SimulationResults = ({ data, darkMode = false, chartAxisColor = '#1A1A1A',
               <LineChart data={timeline} margin={{ top: 10, right: 20, bottom: 5, left: 20 }}>
                 <CartesianGrid strokeDasharray="0" stroke={CHART_GRID_COLOR} strokeOpacity={0.3} />
                 <XAxis dataKey="year" stroke={CHART_AXIS_COLOR} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} />
-                <YAxis stroke={CHART_AXIS_COLOR} tickFormatter={(v) => `₹${Math.round(v / 1000)}k`} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} />
+                <YAxis stroke={CHART_AXIS_COLOR} tickFormatter={(v) => v >= 10000000 ? `₹${(v/10000000).toFixed(1)}Cr` : v >= 100000 ? `₹${(v/100000).toFixed(1)}L` : `₹${Math.round(v/1000)}k`} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} width={62} />
                 <Tooltip contentStyle={{ borderRadius: 0, border: "4px solid #1A1A1A", fontWeight: "bold", backgroundColor: '#fffff0' }} />
                 <Legend wrapperStyle={{ fontWeight: "bold", fontFamily: "monospace", color: '#1A1A1A' }} />
                 <Line type="step" dataKey="netSalary" name={`${careerName} (NET)`} stroke="#FFD700" strokeWidth={3} strokeDasharray="5 5" dot={false} />
@@ -352,7 +363,7 @@ const SimulationResults = ({ data, darkMode = false, chartAxisColor = '#1A1A1A',
               <AreaChart data={timeline} margin={{ top: 10, right: 20, bottom: 5, left: 20 }}>
                 <CartesianGrid strokeDasharray="0" stroke={CHART_GRID_COLOR} strokeOpacity={0.3} />
                 <XAxis dataKey="year" stroke={CHART_AXIS_COLOR} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} />
-                <YAxis stroke={CHART_AXIS_COLOR} tickFormatter={(v) => `₹${Math.round(v / 1000)}k`} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} />
+                <YAxis stroke={CHART_AXIS_COLOR} tickFormatter={(v) => v >= 10000000 ? `₹${(v/10000000).toFixed(1)}Cr` : v >= 100000 ? `₹${(v/100000).toFixed(1)}L` : `₹${Math.round(v/1000)}k`} tick={{ fontWeight: "bold", fontFamily: "monospace", fill: CHART_AXIS_COLOR }} width={62} />
                 <Tooltip contentStyle={{ borderRadius: 0, border: "4px solid #1A1A1A", fontWeight: "bold", backgroundColor: '#fffff0' }} />
                 <Legend wrapperStyle={{ fontWeight: "bold", fontFamily: "monospace", color: '#1A1A1A' }} />
                 {milestones.map((m, i) => (

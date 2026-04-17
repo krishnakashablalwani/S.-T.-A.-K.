@@ -63,7 +63,7 @@ const SidebarForm = ({ onSimulate, loading }) => {
     setAnalyzingResume(true);
     setSkillAnalysis('');
     try {
-      const response = await fetch('http://localhost:5000/api/analyze-resume', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/analyze-resume`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ skills: resumeText, careerName: formData.careerName })

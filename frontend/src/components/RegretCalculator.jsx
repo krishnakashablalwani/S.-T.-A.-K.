@@ -165,7 +165,7 @@ const RegretCalculator = () => {
 
     try {
       const [data] = await Promise.all([
-        fetch('http://localhost:5000/api/regret', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/regret`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form),

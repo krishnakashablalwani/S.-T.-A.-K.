@@ -255,7 +255,7 @@ const FireCalculator = () => {
     const minDelay = new Promise((r) => setTimeout(r, 2600));
     try {
       const [data] = await Promise.all([
-        fetch('http://localhost:5000/api/fire', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/fire`, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify(form),

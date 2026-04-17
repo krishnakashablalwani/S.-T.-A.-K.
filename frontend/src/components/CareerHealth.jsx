@@ -68,9 +68,9 @@ const RatingButtons = ({ value, onChange }) => {
           title={labels[n]}
           className="w-9 h-9 font-black text-sm transition-all"
           style={{
-            border: `2px solid ${value === n ? 'var(--color-brand-accent)' : 'rgba(255,255,255,0.18)'}`,
+            border: `2px solid ${value === n ? 'var(--color-brand-accent)' : 'var(--color-brand-light)'}`,
             backgroundColor: value === n ? 'var(--color-brand-accent)' : 'transparent',
-            color: value === n ? '#000' : 'rgba(255,255,255,0.55)',
+            color: value === n ? '#000' : 'var(--color-brand-light)',
             transform: value === n ? 'scale(1.15)' : 'scale(1)',
           }}>
           {n}
@@ -175,7 +175,7 @@ const CareerHealth = () => {
     const minDelay = new Promise((r) => setTimeout(r, 2200));
     try {
       const [data] = await Promise.all([
-        fetch('http://localhost:5000/api/career-health', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/career-health`, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify({ role, answers }),

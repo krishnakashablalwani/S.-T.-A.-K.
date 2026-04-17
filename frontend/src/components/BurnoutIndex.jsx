@@ -193,7 +193,7 @@ const BurnoutIndex = () => {
     const minDelay = new Promise((r) => setTimeout(r, 2000));
     try {
       const [data] = await Promise.all([
-        fetch('http://localhost:5000/api/burnout', {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/burnout`, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify(form),
