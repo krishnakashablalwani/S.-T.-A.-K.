@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Software Engineer",
+    "startingSalary": 85000,
+    "averageAnnualGrowthRate": 0.04,
+    "jobDemandScore": 85,
+    "automationRisk": 30
+  },
+  {
+    "id": 2,
+    "name": "Registered Nurse",
+    "startingSalary": 75000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 95,
+    "automationRisk": 10
+  },
+  {
+    "id": 3,
+    "name": "Financial Analyst",
+    "startingSalary": 70000,
+    "averageAnnualGrowthRate": 0.035,
+    "jobDemandScore": 75,
+    "automationRisk": 60
+  },
+  {
+    "id": 4,
+    "name": "Graphic Designer",
+    "startingSalary": 55000,
+    "averageAnnualGrowthRate": 0.025,
+    "jobDemandScore": 60,
+    "automationRisk": 70
+  },
+  {
+    "id": 5,
+    "name": "Electrician",
+    "startingSalary": 60000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 90,
+    "automationRisk": 5
+  },
+  {
+    "id": 6,
+    "name": "Data Scientist",
+    "startingSalary": 95000,
+    "averageAnnualGrowthRate": 0.045,
+    "jobDemandScore": 88,
+    "automationRisk": 25
+  },
+  {
+    "id": 7,
+    "name": "High School Teacher",
+    "startingSalary": 50000,
+    "averageAnnualGrowthRate": 0.02,
+    "jobDemandScore": 80,
+    "automationRisk": 15
+  },
+  {
+    "id": 8,
+    "name": "Marketing Manager",
+    "startingSalary": 65000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 70,
+    "automationRisk": 55
+  },
+  {
+    "id": 9,
+    "name": "Content Creator / YouTuber",
+    "startingSalary": 40000,
+    "averageAnnualGrowthRate": 0.06,
+    "jobDemandScore": 50,
+    "automationRisk": 40
+  },
+  {
+    "id": 10,
+    "name": "Pilot",
+    "startingSalary": 100000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 85,
+    "automationRisk": 65
+  },
+  {
+    "id": 11,
+    "name": "Pharmacist",
+    "startingSalary": 120000,
+    "averageAnnualGrowthRate": 0.015,
+    "jobDemandScore": 75,
+    "automationRisk": 45
+  },
+  {
+    "id": 12,
+    "name": "Plumber",
+    "startingSalary": 58000,
+    "averageAnnualGrowthRate": 0.035,
+    "jobDemandScore": 92,
+    "automationRisk": 5
+  },
+  {
+    "id": 13,
+    "name": "Architect",
+    "startingSalary": 65000,
+    "averageAnnualGrowthRate": 0.025,
+    "jobDemandScore": 65,
+    "automationRisk": 35
+  },
+  {
+    "id": 14,
+    "name": "Sales Director",
+    "startingSalary": 90000,
+    "averageAnnualGrowthRate": 0.05,
+    "jobDemandScore": 78,
+    "automationRisk": 20
+  },
+  {
+    "id": 15,
+    "name": "Civil Engineer",
+    "startingSalary": 70000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 75,
+    "automationRisk": 15
+  },
+  {
+    "id": 16,
+    "name": "Professional Gamer",
+    "startingSalary": 40000,
+    "averageAnnualGrowthRate": 0.08,
+    "jobDemandScore": 60,
+    "automationRisk": 5
+  },
+  {
+    "id": 17,
+    "name": "Music Artist",
+    "startingSalary": 30000,
+    "averageAnnualGrowthRate": 0.06,
+    "jobDemandScore": 45,
+    "automationRisk": 2
+  },
+  {
+    "id": 18,
+    "name": "Therapist",
+    "startingSalary": 60000,
+    "averageAnnualGrowthRate": 0.03,
+    "jobDemandScore": 88,
+    "automationRisk": 10
+  }
+]
