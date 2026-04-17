@@ -1,5 +1,7 @@
 # ⚡ S. T. A. K.
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 > **A brutalist, AI-powered career simulator that tells you the truth about your financial future.**
 
 **S. T. A. K.** *(Simulate. Track. Analyze. Know.)* is a full-stack web application with 8 data-driven tools that combine compounding math, multi-dimensional scoring, and Google Gemini AI to simulate, diagnose, and optimize your career and financial trajectory.
